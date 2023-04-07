@@ -7,6 +7,8 @@ pub mod solblog {
     use super::*;
 
     pub fn initialize(ctx: Context<Initialize>) -> Result<()> {
+        let b_p_a = &mut ctx.accounts.blog_account; 
+        b_p_a.authority = *ctx.accounts.authority.key; 
         Ok(())
     }
 }
